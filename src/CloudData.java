@@ -13,7 +13,7 @@ public class CloudData{
 	protected float [][][] convection; // vertical air movement strength, that evolves over time
 	protected int [][][] classification; // cloud type per grid point, evolving over time
 	protected int dimx, dimy, dimt; // data dimensions
-	Vector wind = new Vector(0,0);
+	Vector wind;// = new Vector(0,0);
 	
 	void setWind(Vector w)
 	{
@@ -36,7 +36,7 @@ public class CloudData{
 	
 	
 	//Linear classification
-	void Classification()
+	/*void Classification()
 	{
 		float wm = 0;
 		float xm = 0;
@@ -78,9 +78,9 @@ public class CloudData{
 					div = 9;
 				}
 		}
-		wind.x = totalx/dim();
-		wind.y = totaly/dim();
-	}
+		wind.x = totalx;
+		wind.y = totaly;
+	}*/
 	
 	// read cloud simulation data from file
 	void readData(String fileName){ 

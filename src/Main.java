@@ -12,16 +12,16 @@ public class Main
 		System.gc();
 		for (int j=0; j<5; j++)
 		{
-			//Threaded t = new Threaded(cd, 0, cd.dim()-1);//check if -1 neccesary
-			//cd.setWind(t.compute());
-			cd.Classification();
+			Threaded t = new Threaded(cd, 0, cd.dim()-1);//check if -1 neccesary
+			cd.setWind(t.compute());
+			//cd.Classification();
 		}
 		tick[0] = System.currentTimeMillis();
 		for (int i=1; i<101; i++)
 		{
-			//Threaded t = new Threaded(cd, 0, cd.dim()-1);//check if -1 neccesary
-			//cd.setWind(t.compute());
-			cd.Classification();
+			Threaded t = new Threaded(cd, 0, cd.dim()-1);//check if -1 neccesary
+			cd.setWind(t.compute());
+			//cd.Classification();
 			tick[i]=System.currentTimeMillis();
 		}
 		long tock[] = new long[100];

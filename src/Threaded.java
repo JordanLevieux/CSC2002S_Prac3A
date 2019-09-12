@@ -2,7 +2,7 @@ import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.ForkJoinPool;
 public class Threaded extends RecursiveTask<Vector>
 {
-	static int SEQUENTIAL_CUTOFF = 1000;
+	static int SEQUENTIAL_CUTOFF = 5000;
 	int lo, hi;
 	CloudData cd;
 	int[] pos;
